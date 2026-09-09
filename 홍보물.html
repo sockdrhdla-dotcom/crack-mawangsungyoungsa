@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마왕성 특별 구인 공고</title>
+    <style>
+        @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+        
+        body {
+            font-family: 'Pretendard', sans-serif;
+            background-color: #ffffff;
+            color: #1a1a1a;
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+        }
+        .container {
+            max-width: 800px;
+            width: 100%;
+            background: #ffffff;
+            border: 4px solid #b30000;
+            box-shadow: 15px 15px 0px #b30000;
+            padding: 40px;
+            position: relative;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+            border-bottom: 2px dashed #b30000;
+            padding-bottom: 30px;
+        }
+        .header h1 {
+            color: #b30000;
+            font-size: 3em;
+            font-weight: 900;
+            margin: 0;
+            letter-spacing: -2px;
+            text-shadow: 3px 3px 0px #ffe6e6;
+        }
+        .header p {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #666;
+            margin-top: 10px;
+        }
+        .character-list {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+        .character-card {
+            display: flex;
+            align-items: center;
+            background: #fffafa;
+            border: 2px solid #b30000;
+            transition: transform 0.2s ease;
+        }
+        .character-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 8px 8px 0px #b30000;
+        }
+        .character-card.reverse {
+            flex-direction: row-reverse;
+        }
+        .photo-area {
+            flex: 0 0 200px;
+            height: 250px;
+            background-color: #ffe6e6;
+            border-right: 2px solid #b30000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            position: relative;
+        }
+        .character-card.reverse .photo-area {
+            border-right: none;
+            border-left: 2px solid #b30000;
+        }
+        .photo-area img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .photo-placeholder {
+            color: #b30000;
+            font-weight: bold;
+            opacity: 0.5;
+            position: absolute;
+        }
+        .info-area {
+            padding: 30px;
+            flex: 1;
+        }
+        .name {
+            font-size: 2.2em;
+            color: #b30000;
+            font-weight: 900;
+            margin: 0 0 10px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .species {
+            font-size: 0.4em;
+            background: #b30000;
+            color: #fff;
+            padding: 4px 12px;
+            border-radius: 20px;
+            vertical-align: middle;
+        }
+        .description {
+            font-size: 1.05em;
+            line-height: 1.6;
+            margin-bottom: 15px;
+            word-break: keep-all;
+        }
+        .quote {
+            font-style: italic;
+            color: #800000;
+            font-weight: bold;
+            background: #ffe6e6;
+            padding: 12px;
+            border-left: 4px solid #b30000;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <h1>WARNING: 마왕성 구역</h1>
+        <p>※ 비정상적인 마족들과의 우당탕탕 생존 로맨스 ※</p>
+    </div>
+
+    <div class="character-list">
+        <!-- 아시우스 -->
+        <div class="character-card">
+            <div class="photo-area">
+                <span class="photo-placeholder">아시우스.jpg</span>
+                <img src="아시우스.jpg" alt="아시우스" onerror="this.style.display='none'; this.previousElementSibling.style.display='block';">
+            </div>
+            <div class="info-area">
+                <h2 class="name">아시우스 <span class="species">마왕</span></h2>
+                <div class="description">
+                    마계의 절대자. 오만하고 능글맞은 성격으로 만사를 유희로 대하며, 상대를 자기 멋대로 붙인 별명으로 부르는 버릇이 있습니다. 나른하게 턱을 괴고 세상을 내려다보는 듯하지만, 분노할 때는 공기마저 얼어붙게 만듭니다. 장난기 넘치는 겉모습 아래에는 쉽게 마음을 열지 않는 고독한 왕의 면모가 숨어 있습니다.
+                </div>
+                <div class="quote">"지루한 건 죄야. 내 앞에서 지루하게 굴면… 글쎄."</div>
+            </div>
+        </div>
+
+        <!-- 펠튼 (좌우 반전) -->
+        <div class="character-card reverse">
+            <div class="photo-area">
+                <span class="photo-placeholder">펠튼.jpg</span>
+                <img src="펠튼.jpg" alt="펠튼" onerror="this.style.display='none'; this.previousElementSibling.style.display='block';">
+            </div>
+            <div class="info-area">
+                <h2 class="name">펠튼 <span class="species">과학자</span></h2>
+                <div class="description">
+                    은발에 붉은 눈을 가진 게으른 천재. 의자에 널브러져 있는 것이 기본 자세이며 관심 없는 일엔 눈길조차 주지 않지만, 흥미를 끄는 대상 앞에서는 눈빛이 달라집니다. 하기 싫은 일은 온몸으로 거부하면서도 결국 해내는 묘한 책임감이 있으며, 이따금 아주 미세하게 외로운 표정을 지을 때가 있습니다.
+                </div>
+                <div class="quote">"뭐… 관심 없는데. 근데 이건 좀 궁금하긴 하네."</div>
+            </div>
+        </div>
+
+        <!-- 시몬 -->
+        <div class="character-card">
+            <div class="photo-area">
+                <span class="photo-placeholder">시몬.jpg</span>
+                <img src="시몬.jpg" alt="시몬" onerror="this.style.display='none'; this.previousElementSibling.style.display='block';">
+            </div>
+            <div class="info-area">
+                <h2 class="name">시몬 <span class="species">인큐버스</span></h2>
+                <div class="description">
+                    거리감이라는 개념 자체가 사전에서 삭제된 인큐버스. 밝고 열정적인 성격으로 누구에게든 해맑게 다가갑니다. 좋아하는 것은 맛있는 음식, 재미있는 것, 그리고 사람 곁에 붙어 있는 것. 맹목적이고 단순해 보이지만, 의외로 타인을 향한 감정의 깊이가 남다른 존재입니다.
+                </div>
+                <div class="quote">"어? 왜 도망가? 나 되게 좋은 사람인데!"</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
